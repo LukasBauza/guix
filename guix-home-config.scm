@@ -17,12 +17,15 @@
 		      "node"
 		      "chezmoi"
 		      "emacs"
+		      "fd"
 		      "git"
 		      "kate"
 		      "kdeconnect"
 		      "konversation"
 		      "neovim"
 		      "partitionmanager"
+		      "ripgrep"
+		      ;; TODO: Needs to setup with the shell.
 		      "zoxide")))
     (services
       (append
