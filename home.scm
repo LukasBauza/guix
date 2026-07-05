@@ -8,6 +8,7 @@
 	     (gnu home services shells)
 	     (gnu home services sound)
 	     (gnu packages terminals)
+       (gnu packages wm)
 	     (gnu packages xdisorg)
 	     (gnu services)
 	     (gnu system shadow))
@@ -31,8 +32,11 @@
 		      "ripgrep"
 		      "wezterm"
           "wl-clipboard"
-		      ;; Niri stuff
+		      ;; Desktop stuff
 		      "rofi"
+          "hypridle"
+          "hyprlock"
+          "waybar"
 
 		      ;; TODO: Needs to setup with the shell.
 		      "zoxide")))
