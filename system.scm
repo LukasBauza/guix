@@ -11,6 +11,8 @@
 ;; used in this configuration.
 (use-modules
   (gnu)
+  (gnu packages wm)
+  (gnu packages freedesktop)
   (nongnu packages linux)
   (nongnu system linux-initrd))
 (use-service-modules cups desktop networking ssh xorg)
@@ -37,6 +39,10 @@
   ;; under their own account: use 'guix search KEYWORD' to search
   ;; for packages and 'guix install PACKAGE' to install a package.
   (packages (append (list
+		      ;; Niri stuff
+		      niri
+		      xdg-desktop-portal
+		      xdg-desktop-portal-gtk
                      ;; Fonts to cover all languages.
                      (specification->package "font-google-noto")
                      (specification->package "font-google-noto-emoji")
@@ -47,7 +53,7 @@
   ;; Below is the list of system services.  To search for available
   ;; services, run 'guix system search KEYWORD' in a terminal.
   (services
-   (append (list (service plasma-desktop-service-type)
+   (append (list ;; (service plasma-desktop-service-type)
 		 (service bluetooth-service-type)
 
                  ;; To configure OpenSSH, pass an 'openssh-configuration'

@@ -4,8 +4,11 @@
 (use-modules (gnu)
 	     (gnu home)
 	     (gnu home services)
+	     (gnu home services niri)
 	     (gnu home services shells)
 	     (gnu home services sound)
+	     (gnu packages terminals)
+	     (gnu packages xdisorg)
 	     (gnu services)
 	     (gnu system shadow))
 
@@ -19,18 +22,25 @@
 		      "emacs"
 		      "fd"
 		      "git"
-		      "kate"
 		      "kdeconnect"
-		      "konversation"
+		      ;; Nvim stuff
 		      "neovim"
+
+		      "nushell"
 		      "partitionmanager"
 		      "ripgrep"
+		      "wezterm"
+          "wl-clipboard"
+		      ;; Niri stuff
+		      "rofi"
+
 		      ;; TODO: Needs to setup with the shell.
 		      "zoxide")))
     (services
       (append
         (list
           ;;(service home-bash-service-type)
+	  (service home-niri-service-type)
 
           (service home-files-service-type
            `((".guile" ,%default-dotguile)
