@@ -60,12 +60,11 @@
                  ;; record as a second argument to 'service' below.
                  (service openssh-service-type)
                  (service cups-service-type)
-                 (service xorg-server-service-type
+                 (set-xorg-configuration
                   (xorg-configuration (keyboard-layout keyboard-layout))))
    ;; This is the default list of services we
    ;; are appending to.
    (modify-services %desktop-services
-       (delete gdm-service-type)
 		   (guix-service-type config => (guix-configuration
 						  (inherit config)
 						  (substitute-urls
