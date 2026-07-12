@@ -24,6 +24,7 @@
 		      "fd"
 		      "git"
 		      "kdeconnect"
+          "lem"
 		      ;; Nvim stuff
 		      "neovim"
 
@@ -44,7 +45,10 @@
       (append
         (list
           ;;(service home-bash-service-type)
-	  (service home-niri-service-type)
+	        (service home-niri-service-type)
+
+          ;; TODO May need to remove the pulseaudio from system.scm, as its not being used?
+          (service home-pipewire-service-type)
 
           (service home-files-service-type
            `((".guile" ,%default-dotguile)
