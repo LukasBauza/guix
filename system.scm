@@ -11,8 +11,10 @@
 ;; used in this configuration.
 (use-modules
   (gnu)
-  (gnu packages wm)
   (gnu packages freedesktop)
+  (gnu packages gnome)
+  (gnu packages networking)
+  (gnu packages wm)
   (nongnu packages linux)
   (nongnu system linux-initrd))
 (use-service-modules cups desktop networking ssh xorg)
@@ -43,6 +45,8 @@
 		      niri
 		      xdg-desktop-portal
 		      xdg-desktop-portal-gtk
+          network-manager-applet
+          blueman
                      ;; Fonts to cover all languages.
                      (specification->package "font-google-noto")
                      (specification->package "font-google-noto-emoji")
@@ -53,15 +57,15 @@
   ;; Below is the list of system services.  To search for available
   ;; services, run 'guix system search KEYWORD' in a terminal.
   (services
-   (append (list ;; (service plasma-desktop-service-type)
+   (append (list (service plasma-desktop-service-type)
 		 (service bluetooth-service-type)
 
-                 ;; To configure OpenSSH, pass an 'openssh-configuration'
-                 ;; record as a second argument to 'service' below.
-                 (service openssh-service-type)
-                 (service cups-service-type)
-                 (set-xorg-configuration
-                  (xorg-configuration (keyboard-layout keyboard-layout))))
+       ;; To configure OpenSSH, pass an 'openssh-configuration'
+       ;; record as a second argument to 'service' below.
+       (service openssh-service-type)
+       (service cups-service-type)
+       (set-xorg-configuration
+        (xorg-configuration (keyboard-layout keyboard-layout))))
    ;; This is the default list of services we
    ;; are appending to.
    (modify-services %desktop-services
