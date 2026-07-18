@@ -1,4 +1,4 @@
-(define-module (hardware pc-hardware)
+(define-module (hardware pc)
   #:use-module (gnu)
   #:use-module (gnu system file-systems)
   ; #:use-module (gnu system bootloader)
