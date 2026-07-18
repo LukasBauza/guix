@@ -16,7 +16,9 @@
   (gnu packages networking)
   (gnu packages wm)
   (nongnu packages linux)
-  (nongnu system linux-initrd))
+  (nongnu system linux-initrd)
+
+  (hardware pc-hardware))
 (use-service-modules cups desktop networking ssh xorg)
 
 (operating-system
@@ -76,29 +78,8 @@
 						  (authorized-keys
 						    (append (list (local-file "signing-key.pub"))
 							    %default-authorized-guix-keys)))))))
-  (bootloader (bootloader-configuration
-                (bootloader grub-efi-bootloader)
-                (targets (list "/boot/efi"))
-                (keyboard-layout keyboard-layout)))
-  (swap-devices (list (swap-space
-                        (target (uuid
-                                 "649c5e49-2ef6-4343-a87c-e6bdfecc36da")))))
-  (mapped-devices (list (mapped-device
-                          (source (uuid
-                                   "e3d1c395-fcf2-4414-a891-fed68766ad7a"))
-                          (target "guix-system-crypt")
-                          (type luks-device-mapping))))
 
-  ;; The list of file systems that get "mounted".  The unique
-  ;; file system identifiers there ("UUIDs") can be obtained
-  ;; by running 'blkid' in a terminal.
-  (file-systems (cons* (file-system
-                         (mount-point "/")
-                         (device "/dev/mapper/guix-system-crypt")
-                         (type "ext4")
-                         (dependencies mapped-devices))
-                       (file-system
-                         (mount-point "/boot/efi")
-                         (device (uuid "45BA-ABC4"
-                                       'fat32))
-                         (type "vfat")) %base-file-systems)))
+  (bootloader %my-bootloader)
+  (swap-devices %my-swap-devices)
+  (mapped-devices %my-mapped-devices)
+  (file-systems %my-file-systems))
