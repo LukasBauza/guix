@@ -35,9 +35,11 @@
 		      "wezterm"
           "wl-clipboard"
 		      ;; Desktop stuff
-		      "rofi"
           "hypridle"
           "hyprlock"
+          "libnotify"
+          "polkit-gnome"
+		      "rofi"
           "swaynotificationcenter"
           "waybar"
 
