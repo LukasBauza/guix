@@ -39,6 +39,7 @@
           "hyprlock"
           "libnotify"
           "polkit-gnome"
+          "qtwayland"
 		      "rofi"
           "swaynotificationcenter"
           "waybar"
