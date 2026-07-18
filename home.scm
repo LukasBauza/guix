@@ -18,6 +18,7 @@
     (packages (specifications->packages
 		(list "ark"
 		      "bat"
+          "bluez"
 		      "node"
 		      "chezmoi"
 		      "emacs"
@@ -37,6 +38,7 @@
 		      "rofi"
           "hypridle"
           "hyprlock"
+          "swaynotificationcenter"
           "waybar"
 
 		      ;; TODO: Needs to setup with the shell.
