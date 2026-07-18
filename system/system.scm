@@ -28,12 +28,6 @@
                 %base-user-accounts))
 
   (packages (append (list
-		      ;; Niri stuff
-		      niri
-		      xdg-desktop-portal
-		      xdg-desktop-portal-gtk
-          network-manager-applet
-          blueman
                      (specification->package "font-google-noto")
                      (specification->package "font-google-noto-emoji")
                      (specification->package "font-sarasa-gothic")

@@ -19,31 +19,25 @@
 		(list "ark"
 		      "bat"
           "bluez"
+          "brightnessctl"
 		      "node"
 		      "chezmoi"
 		      "emacs"
 		      "fd"
+          "fzf"
 		      "git"
+          "kcalc"
 		      "kdeconnect"
           "lem"
 		      ;; Nvim stuff
 		      "neovim"
 
 		      "nushell"
+          ;; TODO Should probably be within system.
 		      "partitionmanager"
 		      "ripgrep"
 		      "wezterm"
           "wl-clipboard"
-		      ;; Desktop stuff
-          "hypridle"
-          "hyprlock"
-          "libnotify"
-          "polkit-gnome"
-          "qtwayland"
-		      "rofi"
-          "swaynotificationcenter"
-          "waybar"
-
 		      ;; TODO: Needs to setup with the shell.
 		      "zoxide")))
     (services
