@@ -31,7 +31,8 @@
                      (specification->package "font-google-noto")
                      (specification->package "font-google-noto-emoji")
                      (specification->package "font-sarasa-gothic")
-		     (specification->package "flatpak"))
+                     (specification->package "flatpak")
+                     (specification->package "klassy"))
                     %base-packages))
 
   (services
