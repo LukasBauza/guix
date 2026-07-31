@@ -4,11 +4,11 @@
 (use-modules (gnu)
 	     (gnu home)
 	     (gnu home services)
-	     (gnu home services niri)
+       (gnu home services desktop)
 	     (gnu home services shells)
+       (gnu home services shepherd)
 	     (gnu home services sound)
 	     (gnu packages terminals)
-       (gnu packages wm)
 	     (gnu packages xdisorg)
 	     (gnu services)
 	     (gnu system shadow))
@@ -44,10 +44,11 @@
       (append
         (list
           ;;(service home-bash-service-type)
-	        (service home-niri-service-type)
 
+          (service home-shepherd-service-type)
           ;; TODO May need to remove the pulseaudio from system.scm, as its not being used?
           (service home-pipewire-service-type)
+          (service home-dbus-service-type)
 
           (service home-files-service-type
            `((".guile" ,%default-dotguile)

@@ -1,9 +1,9 @@
 (use-modules
   (gnu)
+  (gnu home services shepherd)
   (gnu packages freedesktop)
   (gnu packages gnome)
   (gnu packages networking)
-  (gnu packages wm)
   (nongnu packages linux)
   (nongnu system linux-initrd)
 
@@ -38,6 +38,7 @@
   (services
    (append (list (service plasma-desktop-service-type)
 		 (service bluetooth-service-type)
+     (service home-shepherd-service-type)
 
        (service openssh-service-type)
        (service cups-service-type)
