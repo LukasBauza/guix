@@ -33,12 +33,11 @@
 		      "neovim"
 
 		      "nushell"
-          ;; TODO Should probably be within system.
 		      "partitionmanager"
+          "starship"
 		      "ripgrep"
 		      "wezterm"
           "wl-clipboard"
-		      ;; TODO: Needs to setup with the shell.
 		      "zoxide")))
     (services
       (append
