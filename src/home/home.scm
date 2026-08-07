@@ -28,6 +28,7 @@
 		      "git"
           "kcalc"
 		      "kdeconnect"
+          "kitty"
           "lem"
 		      ;; Nvim stuff
 		      "neovim"
@@ -36,7 +37,6 @@
 		      "partitionmanager"
           "starship"
 		      "ripgrep"
-		      "wezterm"
           "wl-clipboard"
 		      "zoxide")))
     (services
