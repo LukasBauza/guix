@@ -6,6 +6,8 @@
 (operating-system 
   (inherit base)
 
+  (host-name "guix-laptop")
+
   (kernel-arguments
     (cons* "modprobe.blacklist=elan_i2c"
 	   %default-kernel-arguments))

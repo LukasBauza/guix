@@ -6,6 +6,8 @@
 (operating-system 
   (inherit base)
 
+  (host-name "guix-pc")
+
   (bootloader
     (bootloader-configuration
       (bootloader grub-efi-bootloader)
