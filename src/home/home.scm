@@ -1,6 +1,3 @@
-;; This is a sample Guix Home configuration which can help setup your
-;; home directory in the same declarative manner as Guix System.
-;; For more information, see the Home Configuration section of the manual.
 (use-modules (gnu)
 	     (gnu home)
 	     (gnu home services)
@@ -8,6 +5,7 @@
 	     (gnu home services shells)
        (gnu home services shepherd)
 	     (gnu home services sound)
+	     (gnu home services syncthing)
 	     (gnu packages terminals)
 	     (gnu packages xdisorg)
 	     (gnu services)
@@ -42,9 +40,8 @@
     (services
       (append
         (list
-          ;;(service home-bash-service-type)
-
           (service home-shepherd-service-type)
+          (service home-syncthing-service-type)
           ;; TODO May need to remove the pulseaudio from system.scm, as its not being used?
           (service home-pipewire-service-type)
           (service home-dbus-service-type)
