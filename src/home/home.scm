@@ -24,6 +24,7 @@
 		      "fd"
           "fzf"
 		      "git"
+          "just"
           "kcalc"
 		      "kdeconnect"
           "kitty"
