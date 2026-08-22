@@ -1,8 +1,17 @@
 hostname := `hostname`
 home := env("HOME")
+guix_src_dir := home / ".config/guix/src"
 
-update:
+up: pull sys home flat
+
+pull:
   guix pull
-  sudo guix system reconfigure -L {{home}} {{home}}/systems/{{hostname}}.scm
-  guix home reconfigure -L {{home}} {{home}}/home/home.scm
+
+sys:
+  sudo guix system reconfigure -L {{guix_src_dir}} {{guix_src_dir}}/systems/{{hostname}}.scm
+
+home:
+  guix home reconfigure -L {{guix_src_dir}} {{guix_src_dir}}/home/home.scm
+
+flat:
   flatpak update
