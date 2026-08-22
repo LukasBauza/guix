@@ -37,9 +37,9 @@
                       %base-packages))
 
     (services
-     (append (list (service plasma-desktop-service-type)
+     (append (list 
+       (service plasma-desktop-service-type)
        (service bluetooth-service-type)
-
          (service openssh-service-type)
          (service cups-service-type)
          (set-xorg-configuration
