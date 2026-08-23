@@ -34,8 +34,9 @@
 
 		      "nushell"
 		      "partitionmanager"
-          "starship"
 		      "ripgrep"
+          "starship"
+          "trash-cli"
           "wl-clipboard"
 		      "zoxide")))
     (services
