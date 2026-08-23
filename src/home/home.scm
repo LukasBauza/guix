@@ -29,6 +29,7 @@
 		      "kdeconnect"
           "kitty"
           "lem"
+          "llama.cpp"
 		      ;; Nvim stuff
 		      "neovim"
 
