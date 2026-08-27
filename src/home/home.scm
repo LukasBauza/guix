@@ -29,9 +29,11 @@
 		      "kdeconnect"
           "kitty"
           "lem"
-          "llama.cpp"
+          "llama-cpp"
 		      ;; Nvim stuff
 		      "neovim"
+          "tree-sitter"
+          "clang"
 
 		      "nushell"
 		      "partitionmanager"
