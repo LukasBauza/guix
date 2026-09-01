@@ -3,8 +3,10 @@
                #:use-module (gnu packages freedesktop)
                #:use-module (gnu packages gnome)
                #:use-module (gnu packages networking)
+               #:use-module (gnu packages package-management)
                #:use-module (gnu services cups)
                #:use-module (gnu services desktop)
+               #:use-module (gnu services nix)
                #:use-module (gnu services ssh)
                #:use-module (gnu services xorg)
                #:use-module (nongnu packages linux)
@@ -29,6 +31,7 @@
                   %base-user-accounts))
 
     (packages (append (list
+                       (specification->package "nix")
                        (specification->package "font-google-noto")
                        (specification->package "font-google-noto-emoji")
                        (specification->package "font-sarasa-gothic")
@@ -38,6 +41,7 @@
 
     (services
      (append (list 
+       (service nix-service-type)
        (service plasma-desktop-service-type)
        (service bluetooth-service-type)
          (service openssh-service-type)

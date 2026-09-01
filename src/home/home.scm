@@ -36,6 +36,7 @@
           "clang"
 
 		      "nushell"
+          "okular"
 		      "partitionmanager"
 		      "ripgrep"
           "starship"
