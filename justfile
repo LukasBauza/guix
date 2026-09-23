@@ -14,7 +14,7 @@ up:
     }
   }
   just pull
-  just sys
+  just system
   just home
   just flat
   job kill $keep_alive
@@ -22,7 +22,7 @@ up:
 pull:
   guix pull
 
-sys:
+system:
   sudo guix system reconfigure -L {{guix_src_dir}} {{guix_src_dir}}/systems/{{hostname}}.scm
 
 home:
