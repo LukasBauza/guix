@@ -44,7 +44,6 @@
      (append (list 
        (service nix-service-type)
        (service libvirt-service-type)
-       (service virtlog-service-type)
        (service plasma-desktop-service-type)
        (service bluetooth-service-type)
          (service openssh-service-type)
