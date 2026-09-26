@@ -27,7 +27,7 @@
                     (name "lukas")
                     (group "users")
                     (home-directory "/home/lukas")
-                    (supplementary-groups '("wheel" "netdev" "audio" "video")))
+                    (supplementary-groups '("wheel" "netdev" "audio" "video" "libvirt")))
                   %base-user-accounts))
 
     (packages (append (list
@@ -42,6 +42,8 @@
     (services
      (append (list 
        (service nix-service-type)
+       (service libvirt-service-type)
+       (service virtlog-service-type)
        (service plasma-desktop-service-type)
        (service bluetooth-service-type)
          (service openssh-service-type)
