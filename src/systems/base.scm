@@ -9,6 +9,7 @@
                #:use-module (gnu services nix)
                #:use-module (gnu services ssh)
                #:use-module (gnu services xorg)
+               #:use-module (gnu services virtualization)
                #:use-module (nongnu packages linux)
                #:use-module (nongnu system linux-initrd)
                #:export (base))
