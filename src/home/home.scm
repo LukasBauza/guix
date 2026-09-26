@@ -41,6 +41,7 @@
 		      "ripgrep"
           "starship"
           "trash-cli"
+          "virt-manager"
           "wezterm"
           "wl-clipboard"
 		      "zoxide")))

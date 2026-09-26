@@ -32,6 +32,8 @@
                   %base-user-accounts))
 
     (packages (append (list
+                       (specification->package "qemu")
+                       (specification->package "libvirt")
                        (specification->package "nix")
                        (specification->package "font-google-noto")
                        (specification->package "font-google-noto-emoji")
