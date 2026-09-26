@@ -32,7 +32,7 @@
           "llama-cpp"
 		      ;; Nvim stuff
 		      "neovim"
-          "tree-sitter"
+          "tree-sitter-cli"
           "clang"
 
 		      "nushell"
@@ -41,6 +41,7 @@
 		      "ripgrep"
           "starship"
           "trash-cli"
+          "wezterm"
           "wl-clipboard"
 		      "zoxide")))
     (services
