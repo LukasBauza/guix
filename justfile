@@ -29,4 +29,4 @@ home:
   guix home reconfigure -L {{guix_src_dir}} {{guix_src_dir}}/home/home.scm
 
 flat:
-  flatpak update
+  flatpak update -y
