@@ -15,9 +15,9 @@ update:
   }
   just pull
   just system
+  job kill $keep_alive
   just home
   just flat
-  job kill $keep_alive
 
 pull:
   guix pull
