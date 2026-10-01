@@ -4,7 +4,7 @@ hostname := `hostname`
 home := env("HOME")
 guix_src_dir := home / ".config/guix/src"
 
-up:
+update:
   #!/usr/bin/env nu
   sudo -v
   let keep_alive = job spawn {
